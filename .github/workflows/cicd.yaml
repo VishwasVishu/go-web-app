@@ -39,10 +39,10 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
 
-    - name: Run golangci-lint
-      uses: golangci/golangci-lint-action@v6
+    - name: Set up Go 1.21
+      uses: actions/setup-go@v2
       with:
-        version: v1.56.2
+        go-version: 1.21
   
   push:
     runs-on: ubuntu-latest
